@@ -171,6 +171,16 @@ declare module 'vscode' {
      * @return A uri that can be used on the client machine.
      */
     export function asExternalUri(target: Uri): Thenable<Uri>;
+
+    /**
+     * The current log level of the editor.
+     */
+    export const logLevel: LogLevel;
+
+    /**
+    * An {@link Event} which fires when the log level of the editor changes.
+    */
+    export const onDidChangeLogLevel: Event<LogLevel>;
   }
 
   /**
